@@ -211,7 +211,7 @@
     e.preventDefault();
     var data={
       nombre:document.getElementById('nombre').value,
-      telefono:document.getElementById('telefono').value,
+      telefono:"'"+document.getElementById('telefono').value,
       ciudad:document.getElementById('ciudad').value,
       correo:document.getElementById('correo').value,
       fuente:'landing-preventa-cadencia'
