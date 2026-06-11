@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cadencia de Reservas™ — Preventa | Academia MundoBNB</title>
+<meta name="description" content="El método para construir un calendario lleno, predecible y constantemente reservado. Preventa del taller Cadencia de Reservas.">
+<style>
+  :root{
+    --navy:#14264A; --navy2:#1C3considerable; --navy-grad1:#16294C; --navy-grad2:#1E3A66;
+    --gold:#CDA434; --gold-soft:#E0BE55; --blue:#6E9BD1; --blue-deep:#5380B8;
+    --white:#FFFFFF; --ink:#0E1B33; --muted:#A8B6CE; --card:#1B2F57; --line:#2C406B;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:var(--navy);color:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  .btn{display:inline-block;background:var(--gold);color:var(--ink);font-weight:800;
+    padding:18px 38px;border-radius:10px;text-decoration:none;font-size:1.05rem;letter-spacing:.2px;
+    box-shadow:0 8px 26px rgba(205,164,52,.35);transition:transform .15s ease,box-shadow .15s ease}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(205,164,52,.45)}
+  .btn-lg{padding:22px 52px;font-size:1.18rem}
+  .eyebrow{color:var(--gold);font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:.8rem}
+  .eyebrow::after{content:"";display:block;width:64px;height:3px;background:var(--gold);margin-top:12px;border-radius:2px}
+  /* HERO */
+  header.hero{background:linear-gradient(135deg,var(--navy-grad1) 0%,var(--navy-grad2) 100%);
+    position:relative;overflow:hidden;padding:28px 0 90px}
+  .topbar{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;margin-bottom:64px}
+  .topbar .acc{color:var(--gold);font-weight:600;font-size:.7rem;letter-spacing:2px;text-transform:uppercase}
+  .hero h1{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.02;font-weight:800;margin:18px 0 14px}
+  .hero h1 .blue{color:var(--blue)}
+  .hero .sub{font-size:clamp(1.05rem,2.4vw,1.35rem);color:#D6DEEC;max-width:620px;margin-bottom:34px}
+  .badge{display:inline-block;background:rgba(205,164,52,.15);color:var(--gold-soft);border:1px solid var(--gold);
+    padding:7px 16px;border-radius:999px;font-weight:700;font-size:.8rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+  .equalizer{position:absolute;right:-40px;top:90px;display:flex;align-items:center;gap:9px;height:300px;opacity:.9}
+  .equalizer span{width:13px;border-radius:7px;display:block}
+  @media(max-width:820px){.equalizer{display:none}}
+  .micro{margin-top:16px;color:var(--muted);font-size:.92rem}
+  /* SECTIONS */
+  section{padding:78px 0}
+  section h2{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:800;margin:14px 0 10px;line-height:1.15}
+  section h2 .blue{color:var(--blue)}
+  .lead{color:var(--muted);font-size:1.12rem;max-width:680px}
+  .alt{background:#11203F}
+  .pain ul{list-style:none;margin-top:26px;display:grid;gap:14px;max-width:720px}
+  .pain li{padding-left:34px;position:relative;font-size:1.08rem;color:#D6DEEC}
+  .pain li::before{content:"✕";position:absolute;left:0;color:var(--gold);font-weight:800}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:36px}
+  .pillar{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
+  .pillar .n{color:var(--gold);font-weight:800;font-size:.85rem;letter-spacing:1px}
+  .pillar h3{font-size:1.18rem;margin:8px 0 8px}
+  .pillar p{color:var(--muted);font-size:.98rem}
+  /* CASES */
+  .cases{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:36px}
+  .case{background:linear-gradient(160deg,#1B2F57,#16294C);border:1px solid var(--line);border-radius:16px;padding:30px}
+  .case .who{color:var(--blue);font-weight:700;margin-bottom:6px}
+  .case .big{font-size:2.4rem;font-weight:800;color:var(--gold);line-height:1}
+  .case .big small{display:block;font-size:.95rem;color:var(--muted);font-weight:500;margin-top:8px}
+  .case p{color:#CBD6E8;margin-top:14px;font-size:.98rem}
+  /* OFFER */
+  .offer{background:linear-gradient(135deg,var(--navy-grad1),var(--navy-grad2));text-align:center}
+  .price-card{background:var(--card);border:1px solid var(--gold);border-radius:20px;max-width:560px;margin:30px auto 0;padding:42px 32px}
+  .price-card .pre{color:var(--muted);text-decoration:line-through;font-size:1.1rem}
+  .price-card .now{font-size:3.2rem;font-weight:800;color:var(--white);line-height:1.1}
+  .price-card .now span{color:var(--gold)}
+  .incl{list-style:none;text-align:left;max-width:440px;margin:24px auto;display:grid;gap:12px}
+  .incl li{padding-left:30px;position:relative;color:#D6DEEC}
+  .incl li::before{content:"✓";position:absolute;left:0;color:var(--gold);font-weight:800}
+  .guarantee{color:var(--muted);font-size:.92rem;margin-top:18px}
+  footer{background:#0E1B33;padding:40px 0;text-align:center;color:var(--muted);font-size:.9rem}
+  footer a{color:var(--blue);text-decoration:none}
+  .center{text-align:center}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar">mundo<span style="color:var(--blue)">bnb</span> &nbsp;<span class="acc">academia</span></div>
+    <span class="badge">Preventa · Cupo limitado</span>
+    <h1>Cadencia<br><span class="blue">de Reservas™</span></h1>
+    <p class="sub">El método para construir un calendario <strong>lleno, predecible y constantemente reservado</strong> — y atraer mejores huéspedes a mejores tarifas.</p>
+    <a class="btn btn-lg" href="https://buy.stripe.com/9B6cN5bAsc4q0KI3cscAo05">Reservar mi lugar en preventa</a>
+    <p class="micro">Taller pregrabado + webinars de venta en vivo · Academia MundoBNB</p>
+  </div>
+  <div class="equalizer" aria-hidden="true">
+    <span style="height:120px;background:var(--gold)"></span>
+    <span style="height:70px;background:var(--blue)"></span>
+    <span style="height:170px;background:#E8EDF5"></span>
+    <span style="height:90px;background:var(--blue-deep)"></span>
+    <span style="height:210px;background:var(--gold)"></span>
+    <span style="height:110px;background:var(--blue)"></span>
+    <span style="height:150px;background:#C9D4E6"></span>
+    <span style="height:80px;background:var(--blue-deep)"></span>
+    <span style="height:190px;background:var(--gold)"></span>
+    <span style="height:100px;background:var(--blue)"></span>
+    <span style="height:140px;background:#9FB0C9"></span>
+    <span style="height:70px;background:var(--blue-deep)"></span>
+  </div>
+</header>
+
+<section class="pain alt">
+  <div class="wrap">
+    <span class="eyebrow">El problema real</span>
+    <h2>Tu Airbnb no se reserva… <span class="blue">y no siempre es el precio</span></h2>
+    <p class="lead">La mayoría de los anfitriones reaccionan al calendario: bajan precios por pánico y los suben por emoción. Eso no es estrategia, es jugar al casino con una propiedad amueblada.</p>
+    <ul>
+      <li>Bajas precios por miedo y atraes al huésped equivocado.</li>
+      <li>Crees que ya tocaste tu techo… sin saber que tu competencia gana el doble.</li>
+      <li>Vives del último minuto, sin ocupación futura que te dé tranquilidad.</li>
+      <li>Tienes buenas fotos pero el mercado no las paga.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">El método</span>
+    <h2>No vendes noches. <span class="blue">Vendes un sentimiento.</span></h2>
+    <p class="lead">Cadencia de Reservas es el sistema para convertir tu propiedad en un producto deseable, predecible y constantemente reservado dentro del marketplace. La meta no es llenar noches: es construir <strong>momentum</strong> — ocupación futura saludable que el algoritmo lee como confianza.</p>
+    <div class="grid">
+      <div class="pillar"><div class="n">PILAR 1</div><h3>Deseabilidad</h3><p>Que tu propiedad provoque el clic en su huésped ideal. Sin clic, no hay nada más.</p></div>
+      <div class="pillar"><div class="n">PILAR 2</div><h3>Precio de activación</h3><p>El precio como herramienta, no como identidad. Estratégico, no bajo por pánico.</p></div>
+      <div class="pillar"><div class="n">PILAR 3</div><h3>Cadencia futura</h3><p>Ocupación que se construye hacia adelante. El corazón del método.</p></div>
+      <div class="pillar"><div class="n">PILAR 4</div><h3>Experiencia sin fricción</h3><p>Cumplir la promesa del anuncio en cada etapa. Cero fricción.</p></div>
+      <div class="pillar"><div class="n">PILAR 5</div><h3>Reputación</h3><p>La prueba de que tu producto es real. Infraestructura de precio.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <span class="eyebrow">Resultados reales</span>
+    <h2>Mismas propiedades. <span class="blue">Otro negocio.</span></h2>
+    <div class="cases">
+      <div class="case">
+        <div class="who">Mónica y Luis · Miami</div>
+        <div class="big">$3,000 → $9,300<small>al mes (3 deptos), sin remodelar · ADR ~$130 · ocupación ~80%</small></div>
+        <p>Solo optimización de anuncios, edición de imágenes y estrategia de precios por horizontes.</p>
+      </div>
+      <div class="case">
+        <div class="who">Nancy · Los Gatos, California</div>
+        <div class="big">21% → 74%<small>ocupación · de perder dinero a $11,200 el primer mes optimizado</small></div>
+        <p>Bajamos el precio cuando ella creía que debía subirlo. El problema no era el precio: era la deseabilidad.</p>
+      </div>
+    </div>
+    <p class="micro" style="margin-top:22px">Resultados reales de clientes. Cada propiedad y mercado es distinto; la metodología valida primero si hay potencial.</p>
+  </div>
+</section>
+
+<section class="offer" id="preventa">
+  <div class="wrap">
+    <span class="eyebrow" style="display:inline-block">Preventa</span>
+    <h2>Asegura tu lugar a precio de preventa</h2>
+    <div class="price-card">
+      <p class="pre">Precio regular: 500 USD</p>
+      <div class="now">$<span>297</span> <small style="font-size:1rem;color:var(--muted)">USD</small></div>
+      <ul class="incl">
+        <li>Taller pregrabado completo de Cadencia de Reservas™</li>
+        <li>Webinars de venta y Q&A en vivo</li>
+        <li>Plantillas y checklists del método (diagnóstico, pricing, experiencia)</li>
+        <li>Acceso a la comunidad de Academia MundoBNB</li>
+      </ul>
+      <a class="btn btn-lg" href="https://buy.stripe.com/9B6cN5bAsc4q0KI3cscAo05">Reservar mi lugar</a>
+      <p class="guarantee">Cupo limitado de preventa. Pago seguro vía Stripe.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Academia MundoBNB</strong> · Cadencia de Reservas™</p>
+    <p style="margin-top:8px"><a href="https://jpmundobnb.github.io/mundobnb-legal/">Política de privacidad</a> · jp@mundobnb.com</p>
+  </div>
+</footer>
+
+</body>
+</html>
