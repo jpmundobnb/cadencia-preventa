@@ -220,7 +220,7 @@
       document.getElementById('ok').style.display='block';
       setTimeout(function(){ window.location.href=STRIPE; },900); };
     if(LEAD_WEBHOOK.indexOf('http')===0){
-      fetch(LEAD_WEBHOOK,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}).then(go).catch(go);
+      fetch(LEAD_WEBHOOK,{method:'POST',mode:'no-cors',body:new URLSearchParams(data)}).then(go).catch(go);
     } else { go(); }
   });
 </script>
